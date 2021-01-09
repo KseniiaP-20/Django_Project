@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+      <style>
+          body {
+              background-color: #fff;
+              font-family: 'Montserrat', sans-serif;
+          }
+          header h1, h2 {
+              text-align: center;
+              font-weight: lighter;
+              color: #60606E;
+          }
+          section {
+              font-size: 14px;
+          }
+          .form {
+              color: #9A9A9A;
+          }
+          .output {
+              font-weight: bold;
+              color: black;
+          }
+          h1 {
+              font-size: 18px;
+          }
+          h2 {
+              font-size: 16px;
+          }
+          header, section {
+              margin: 20px 0 20px 0;
+          }
+          img {
+              height: 320px;
+              width: 320px;
+          }
+          a.disabled {
+              cursor: default;
+          }
+          a {
+              text-decoration: none;
+              font-weight: bold;
+              color: #5e5d5d;
+          }
+          a:hover {
+              text-decoration: underline;
+          }
+          section h2 {
+              text-align: left;
+          }
+          div {
+              margin-right: 50px;
+              float: left;
+          }
+          .output p {
+              padding-bottom: 5px;
+          }
+      </style>
+  </head>
+  <body>
+      <header>
+          <h1>Путешествие с друзьями</h1>
+          <h2>
+          	  Все соскучились по путешествиям, и ты приглашаешь своего друга поехать с тобой.
+          	  <br>Выбери, кого ты пригласишь и в какой город вы отправитесь.
+          </h2>
+      </header>
+      <section>
+          <div class="img">
+               <img src="https://www.udima.es/sites/udima.es/files/Turismo.jpg">
+          </div>
+          <div class="form">
+               <form action="/" method="post">
+                   <h2 class="city">Выбери город:</h2>
+                   {{ cities|safe }}  
+                   <h2 class="friend">Выбери друга:</h2>
+                   {{ friends|safe }}
+                   <br>
+                   <input type="submit" value="Вперед!">
+              </form>
+          </div>
+          <div class="output">     
+               <br>
+               <p>
+                   {{ friend_output }}
+              </p>
+               <p>
+                   {{ city_weather }}
+              </p> 
+              <p>
+                   {{ city_weather2 }}
+              </p>
+              <p>
+                   {{ conclusion }}
+              </p>
+          </div>
+      </section>
+  </body>
+</html>
