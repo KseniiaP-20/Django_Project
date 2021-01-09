@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+    <style>
+          body {
+              background-color: #fff;
+              font-family: 'Montserrat', sans-serif;
+          }
+          h1, h2 {
+              text-align: center;
+              font-weight: lighter;
+              color: #60606E;
+          }
+          section {
+              font-size: 14px;
+              color: #9A9A9A;
+          }
+          h1 {
+              font-size: 18px;
+          }
+          h2 {
+              font-size: 16px;
+          }
+          header, section {
+              margin: 20px;
+          }
+          a.disabled {
+              cursor: default;
+          }
+          a {
+              text-decoration: none;
+              font-weight: bold;
+              color: #5e5d5d;
+          }
+          a:hover {
+              text-decoration: underline;
+          }
+          section p {
+              text-align: justify;
+          } 
+      </style>
+</head>
+<body>
+    <header>
+        <h1>Путешествие с друзьями</h1>
+        <h2>{{ name }}</h2>
+    </header>
+    <section>
+        <p>{{ description|safe }}</p>
+        <br>
+        <br>
+        <a href="/">На главную</a>
+    </section>
+</body>
+</html>
